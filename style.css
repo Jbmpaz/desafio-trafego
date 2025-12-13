@@ -1,0 +1,376 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/*____________________________________________________HEADER______________________________________________________*/
+
+.width-layout{
+    width: 90%;
+    max-width: 1344px;
+    margin: 0 auto;
+}
+
+.container{
+    width: 100%;
+}
+
+.contato-header{
+    width: 100%;
+    text-align: right;
+    padding: 5px;
+    background-color: #242424;
+}
+.contato-header a{
+    color: white;
+    transition: .2s linear;
+}
+
+
+.contato-header a:hover{
+    color: #9b9bf8;
+}
+.menu-header {
+    padding: 0px;
+    background-color: #2f2f69;
+}
+.menu-header .width-layout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-header img{
+    height: 50px;
+}
+
+.dropdown-menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dropdown-menu ul{
+    position: absolute;
+    background-color: white;
+}
+
+.dropdown-menu a, .nav-footer a{
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.dropdown-menu li a::before, .nav-footer li a::before{
+    content: "";
+    width: 110%;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    right: 110%;
+    top: 90%;
+    transition: .3s ease-in-out;
+}
+
+.dropdown-menu li:hover a::before, .nav-footer li:hover a::before{
+    right: -3%;
+}
+
+.dropdown-submenu01 a::before{
+    background-color: transparent !important;
+}
+
+.dropdown-submenu01 a{
+    color: #242424;
+}
+
+.dropdown-submenu02 li a{
+    color: #242424 !important;
+}
+
+.dropdown-submenu01{
+    position: relative;
+    width: 250px;
+}
+
+.dropdown-submenu02{
+    position: absolute;
+    top: 0;
+    right: 100%;
+}
+
+.dropdown-submenu01 a, .dropdown-submenu02 a{
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown-submenu01, .dropdown-submenu02 li{
+    transition: .3s linear;
+}
+
+.dropdown-submenu01:hover, .dropdown-submenu02 li:hover{
+    background-color: #2f2f69;
+}
+.dropdown-submenu01:hover a{
+    color: white;
+}
+.dropdown-submenu02 li:hover a{
+    color: white !important;
+}
+
+.dropdown-submenu02 li{
+    width:300px;
+}
+
+.dropdown-submenu01, .dropdown-submenu02{
+    display: none;
+}
+
+.dropdown-submenu:hover .dropdown-submenu01{
+    display: block;
+}
+
+.dropdown-submenu01:hover .dropdown-submenu02{
+    display: block;
+}
+
+/*____________________________________________________MENU MOBILE______________________________________________________*/
+
+
+#menu-burguer{
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid #242424;
+    display: none;
+}
+#menu-burguer img{
+    width: 20px;
+    height: auto;
+}
+
+#menu-mobile{
+    background-color: #2f2f69;
+    display: none;
+}
+
+#menu-mobile nav {
+    margin-left: 10%;
+}
+
+#menu-mobile li {
+    padding: 10px;
+}
+
+#menu-mobile li a{
+    color: white;
+    display: inline-block;
+}
+
+.span-menu{
+    background-color: #1a1a3a;
+    margin-left: 10px;
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+
+.dropdown-menu-mobile01{
+    display: none;
+    margin-left: 5%;
+}
+
+.dropdown-menu-mobile02{
+    display: none;
+    margin-left: 5%;
+}
+
+.show{
+    display: block !important;
+}
+
+/*____________________________________________________HERO______________________________________________________*/
+
+.hero{
+    height: 60vh;
+    background: url('img/banner.png') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-hero{ 
+    height: 100%;
+    width: 100%;
+    background-color: #00000099;
+    color: white;
+}
+.div-hero .width-layout{
+    height: 100%;
+    width: 100%;
+    padding: 50px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 25px;
+}
+
+.div-hero h1{
+    margin-bottom: 3%;
+}
+
+/*____________________________________________________CONTEUDO PRINCIPAL_____________________________________________________*/
+
+main{
+    padding: 15px 0;
+}
+
+.conteudo-principal{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.conteudo-principal div{
+    width: 55%;
+}
+
+.conteudo-principal img{
+    width: 35%;  
+}
+
+.conteudo-principal ul li{
+    margin: 10px 0;
+}
+
+/*____________________________________________________PROTUDOS_____________________________________________________*/
+
+.nossos-produtos h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.produtos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+figure{
+        width: 200px;
+        margin: 15px;
+}
+figure img{
+    height: 160px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+/*____________________________________________________FOOTER_____________________________________________________*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px 30px;
+    background-color: #242424;
+    color: white;
+}
+
+.nav-footer {
+    margin: 20px;
+}
+.nav-footer ul, .redes-sociais{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-footer ul li a{
+    color: white;
+}
+
+footer .width-layout p {
+    margin: 5px 0 2rem;
+    text-align: center;
+}
+
+.redes-sociais img{
+    width: 30px;
+}
+
+/*___________________________________________________________RESPONSIVADADE____________________________________________________________*/
+
+@media screen and (max-width: 768px) {
+    .div-hero .width-layout {
+        padding: 0;
+    }
+    .width-layout{
+        width: 95%;
+    }
+    .nav-footer {
+        margin: 0;
+    }
+    .menu-header{
+        padding: 10px 0;
+    }
+    .nav-menu-header{
+        display: none;
+    }
+    .conteudo-principal img{
+        width: 40%;
+    }
+    #menu-burguer{
+        display: block;
+    }
+    .hero{
+        height: 40vh;
+    }
+    .div-hero{
+        padding: 10%;
+    }
+    .conteudo-principal{
+        flex-direction: column;
+    }
+    .conteudo-principal div{
+        width: 100%;
+    }
+    .conteudo-principal img{
+        width: 100%;
+    }
+    .nav-footer{
+        width: 100%;
+    }
+    .nav-footer ul{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+    .nav-footer ul li a{
+        display: inline-block;
+        padding: 10px;
+        width: 100%;
+        background-color: #141414;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .hero{
+        height: 50vh;
+    }
+    .div-hero{
+        padding: 5%;
+        text-align: justify;
+    }
+}
